@@ -15,17 +15,17 @@ import TopDealsList from './TopDealsList.jsx';
 // ==================THE FUNCTIONAL COMPONENT ===============
 function Body(props) {
 
-
-
-   // ==========Props Object Destructuring =========
+  
+  // ==========Props Object Destructuring =========
   const expansionObj = props.expansionObj;
-  console.log(expansionObj);
 
+  
   // ====== props actions destructuring ======
   const AllActions = props.expandFunctions
 
 
-  // ========== CONDITIONAL RENDERING =============
+
+  // ======================== CONDITIONAL RENDERING ======================
   if(expansionObj.categoryExpanded){
 
     return(

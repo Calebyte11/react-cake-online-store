@@ -1,5 +1,4 @@
-import Styled from 'styled-components';
-// import { CategoryListContainer } from './CategoryList.styles';
+import Styled from "styled-components";
 
 export const PopularListContainer = Styled.div`
     /* height: 290px; */
@@ -115,7 +114,8 @@ export const PopularListContainer = Styled.div`
                         margin-top: -15px;
                         font-size : 15px;
 
-                        /* color: ${ (props) => props.liked ? "#ff6464" : "#4f4f4f"}; */
+                        /* color: ${(props) =>
+                          props.liked ? "#ff6464" : "#4f4f4f"}; */
                     }
 
                     & > div > button {
