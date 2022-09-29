@@ -121,7 +121,7 @@ export const PopularListContainer = Styled.div`
                     & > div > button {
                         text-align: start;
                         padding-left: 0px;
-                        font-size : 15px;
+                        font-size : 14px;
                         border: none;
                         outline: none;
                         background: transparent;

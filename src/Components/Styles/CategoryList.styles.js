@@ -40,7 +40,8 @@ export const CategoryListContainer = styled.div`
 
     & > li {
       background: #ff6464;
-      min-width: 75px;
+      /* min-width: 75px; */
+      padding: 6px;
       height: 120px;
       list-style: none;
       margin: 5px 15px 15px 5px;
@@ -54,7 +55,7 @@ export const CategoryListContainer = styled.div`
         width: 66px;
         aspect-ratio: 1;
         border-radius: 50%;
-        margin: 6px auto;
+        margin: 2px auto;
       }
 
       & > h4 {

@@ -124,7 +124,7 @@ export const TwoColumnListContainer = styled(PopularListContainer)`
         color: #ff6464;
         border-radius: 3px;
         background: #ffdfdf;
-        padding: 1px 5px 1px 5px;
+        padding: 2px 5px 2px 5px;
         font-weight: 500;
       }
 

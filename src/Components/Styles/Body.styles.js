@@ -14,8 +14,7 @@ export const BodyDiv = styled.div`
   position: absolute;
   top: ${(props) =>
     props.isExpanded.categoryExpanded ||
-    props.isExpanded.popularExpanded ||
-    props.isExpanded.topDealsExpanded
+    props.isExpanded.viewPageCategorially
       ? "7%"
       : "14%"};
   left: 0%;

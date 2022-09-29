@@ -1,11 +1,16 @@
-import Homepage from "./Components/DomComponents/Homepage";
+import Homepage from "./Components/Pages/Homepage";
+import { Provider } from "react-redux";
+import Store from "./Components/Redux/Store";
 
 
 function App() {
   return (
-    <div>
-      <Homepage/>
-    </div>
+    <Provider store={Store} >
+      <div>
+        <Homepage/>
+      </div>
+    </Provider>  
+      
   );
 }
 

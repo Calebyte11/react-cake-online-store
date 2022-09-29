@@ -1,0 +1,70 @@
+{
+    "workbench.iconTheme": "vscode-icons",
+    "security.workspace.trust.untrustedFiles": "open",
+    "window.openFilesInNewWindow": "on",
+    "debug.terminal.clearBeforeReusing": true,
+    "terminal.integrated.persistentSessionReviveProcess": "never",
+    "terminal.integrated.enablePersistentSessions": true,
+    "terminal.integrated.fontSize": 13,
+    "terminal.integrated.profiles.windows": {
+        "PowerShell": {
+            "source": "PowerShell",
+            "icon": "terminal-powershell"
+        },
+        "Command Prompt": {
+            "path": [
+                "${env:windir}\\Sysnative\\cmd.exe",
+                "${env:windir}\\System32\\cmd.exe"
+            ],
+            "args": [],
+            "icon": "terminal-cmd"
+        },
+        "Git Bash": {
+            "path": "C:\\Program Files\\Git\\bin\\bash.exe",
+            "source": "Git Bash"
+        },
+        "Windows PowerShell": {
+            "path": "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe"
+        }
+    },
+    "tabnine.experimentalAutoImports": true,
+    "kite.codefinder.enableLineDecoration": true,
+    "emmet.includeLanguages": {
+        "javascript": "javascriptreact"
+    },
+    "explorer.compactFolders": false,
+    "npm.enableRunFromFolder": true,
+    "explorer.confirmDelete": false,
+    "javascript.updateImportsOnFileMove.enabled": "always",
+    "terminal.integrated.defaultProfile.windows": "Git Bash",
+    "terminal.integrated.shellIntegration.showWelcome": false,
+    "terminal.integrated.defaultProfile.linux": "bash (2)",
+    "terminal.integrated.copyOnSelection": true,
+    "terminal.integrated.cursorBlinking": true,
+    "terminal.integrated.env.windows": {
+    
+    },
+    "terminal.external.windowsExec": "C:\\Program Files\\Git\\bin\\bash.exe",
+    "terminal.integrated.automationProfile.windows": {
+        
+
+    
+        "args": ["--login"],
+        "path": "C:\\Program Files\\Git\\bin\\bash.exe"
+    },
+    "npm.keybindingsChangedWarningShown": true,
+    "[javascriptreact]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[javascript]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "markdown.preview.fontSize": 12,
+    "debug.console.fontSize": 12,
+    "editor.fontFamily": "Fira Code",
+    "editor.fontLigatures": true,
+    "terminal.integrated.fontFamily": "monospace",
+    "editor.fontSize": 11,
+    "editor.cursorStyle": "block"
+    
+}
