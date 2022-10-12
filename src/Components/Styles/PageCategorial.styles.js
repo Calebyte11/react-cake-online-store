@@ -38,7 +38,7 @@ export const PagePrimaryNav = styled.div`
 
 // ===== list of individual PriNavs ====
 export const PriNavList = styled.li`
-  background: #e8e8e8;
+  background: #f0f0f0;
   min-width: 95px;
   height: 32px;
   list-style: none;
@@ -48,11 +48,11 @@ export const PriNavList = styled.li`
   flex-direction: column;
   align-items: center;
   justify-content: space-evenly;
-  /* position: relative; */
+  font-size: 15px;
   overflow: hidden;
 
   & > h3 {
-    font-size: 16px;
+    font-size: 15px;
     font-family: inherit;
     font-weight: 600;
     color: ${({ active }) => (active ? "#ff6464" : "inherit")};
@@ -77,7 +77,7 @@ export const PriNavList = styled.li`
 // =========== For the 2 Column list ================
 export const TwoColumnListContainer = styled(PopularListContainer)`
   margin-top: 53px;
-  font-size: 18px;
+  font-size: 17px;
   font-weight: 700;
   z-index: 333;
   border-radius: 0px;
@@ -125,7 +125,7 @@ export const TwoColumnListContainer = styled(PopularListContainer)`
         border-radius: 3px;
         background: #ffdfdf;
         padding: 2px 5px 2px 5px;
-        font-weight: 500;
+        font-weight: 400;
       }
 
       //==== product image ======
@@ -146,12 +146,12 @@ export const TwoColumnListContainer = styled(PopularListContainer)`
           gap: 4px;
 
           & > h4 {
-            font-size: 15px;
+            font-size: 14px;
           }
 
           & > h5 {
             color: #a0a4a8;
-            font-size: 12px;
+            font-size: 11px;
             font-weight: 500;
             text-decoration: line-through;
             text-decoration-color: inherit;
@@ -160,7 +160,7 @@ export const TwoColumnListContainer = styled(PopularListContainer)`
 
         & > section {
           & > span {
-            font-size: 13px;
+            font-size: 12px;
             color: #6570a7;
             font-weight: 400;
             width: 100%;

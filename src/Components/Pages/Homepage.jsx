@@ -17,17 +17,6 @@ function Homepage() {
   // const [ProductPageData, setProductPageData] = useState(null);
 
 
-  // ====== All Event handlers ========
-  // const handleProductPageExpand = (eachItem) => {
-  //   // setProductPageData(eachItem);
-
-
-  // };
-
-
-  
-
-
   return (
     <HomeDiv>
       <Header />
