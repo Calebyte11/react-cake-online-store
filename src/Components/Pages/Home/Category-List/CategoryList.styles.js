@@ -5,8 +5,8 @@ export const CategoryListContainer = styled.div`
   border-radius: 20px;
   width: 98%;
   /* height: px; */
-  font-size: 18px;
-  font-weight: 700;
+  font-size: 17px;
+  font-weight: 500;
   padding: 0px 7px;
   z-index: 333;
   overflow-x: hidden;
@@ -24,7 +24,7 @@ export const CategoryListContainer = styled.div`
       background-color: transparent;
       border: none;
       font-family: inherit;
-      font-size: 15px;
+      font-size: 14px;
       color: #ff6464;
       margin-right: 5px;
     }
@@ -40,7 +40,7 @@ export const CategoryListContainer = styled.div`
 
     & > li {
       background: #ff6464;
-      /* min-width: 75px; */
+      min-width: 78px;
       padding: 6px;
       height: 120px;
       list-style: none;
@@ -59,7 +59,7 @@ export const CategoryListContainer = styled.div`
       }
 
       & > h4 {
-        padding: 2px;
+        padding-top: 2px;
         font-family: inherit;
         font-weight: 500;
         font-style: italic;

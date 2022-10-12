@@ -1,12 +1,15 @@
 import styled from "styled-components";
-import { PopularListContainer } from "./PopularList.styles";
+import { PopularListContainer } from "../Popular-List/PopularList.styles";
 
 export const TopDealsContainer = styled(PopularListContainer)`
   margin-top: -15px;
+  font-size: 17px;
+  font-weight: 500;
 
   & > section {
     & > button {
-      font-size: 15px;
+      font-size: 13px;
+      font-weight: 400;
     }
   }
 
@@ -58,6 +61,7 @@ export const TopDealsContainer = styled(PopularListContainer)`
             height: 0px;
             margin-top: 8px;
             font-size: 15px;
+            text-transform: capitalize;
           }
 
           & > h6 {

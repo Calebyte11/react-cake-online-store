@@ -1,15 +1,16 @@
 import React, { useState } from "react";
-import { BsStarFill, BsHeartFill } from "react-icons/bs";
+import { BsStarFill, BsHeartFill, BsHeart } from "react-icons/bs"
 // import ProductPage from "./ProductPage";
 import {
   PriNavList,
   PageCategorialContainer,
   PagePrimaryNav,
   TwoColumnListContainer,
-} from "../Styles/PageCategorial.styles";
+} from "./PageCategorial.styles";
 
 import { useSelector, useDispatch } from "react-redux";
-import { actionViewProductPage } from "../Redux/Ducks/PagesNavigationReducer";
+import { actionViewProductPage } from "../../../State Management/Redux/Ducks/PagesNavigationReducer";
+import { FavButton } from "../Home/Popular-List/PopularList.styles";
 
 
 
@@ -37,6 +38,7 @@ function PageCategorial(props) {
     { name: "Cake Parfait", active: false },
   ]);
 
+  const Liked = false;
   
   // ========== Event Handlers ========
   const ProductImgClickHandler = (eachItem) => {
@@ -84,7 +86,7 @@ function PageCategorial(props) {
           <ul>
             {ArrofPageData.pageData.map((eachItem) => {
               return (
-                <li key={eachItem.ImgSrc}>
+                <li key={eachItem.ImgSrc} liked={Liked}>
                   <h5>-40%</h5>
                   <img
                     src={eachItem.ImgSrc}
@@ -101,14 +103,14 @@ function PageCategorial(props) {
                         <h6>category</h6>
                       </div>
 
-                      <button>
-                        <BsHeartFill />
-                      </button>
+                      <FavButton liked ={Liked}>
+                        { Liked ? <BsHeartFill/> : <BsHeart/> }
+                      </FavButton>
                     </section>
 
                     <div>
-                      <h4>#3,000</h4>
-                      <h5>#4,500</h5>
+                      <h4>₦3,000</h4>
+                      <h5>₦4,500</h5>
                     </div>
 
                     <section>

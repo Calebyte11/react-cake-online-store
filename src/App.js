@@ -1,6 +1,6 @@
-import Homepage from "./Components/Pages/Homepage";
+import Homepage from "./Components/Pages/Home/Home-Page/Homepage.jsx";
 import { Provider } from "react-redux";
-import Store from "./Components/Redux/Store";
+import Store from "./State Management/Redux/Store";
 
 
 function App() {

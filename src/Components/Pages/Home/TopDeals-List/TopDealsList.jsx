@@ -11,11 +11,11 @@ import {
   BerryParfait,
   Chicken2,
   TopWedCake,
-} from "../Images/Images";
-import { TopDealsContainer } from "../Styles/TopDealsList.styles";
+} from "../../../../Assets/Images/Images.js";
+import { TopDealsContainer } from "./TopDealsList.styles";
 
 import { useDispatch } from 'react-redux';
-import { actionViewPageCategorially, actionViewProductPage } from "../Redux/Ducks/PagesNavigationReducer"
+import { actionViewPageCategorially, actionViewProductPage } from "../../../../State Management/Redux/Ducks/PagesNavigationReducer"
 
 
 
@@ -50,12 +50,12 @@ function TopDealsList(props) {
 
   // ======= Event Handlers =======
   const handleShowAll = (popularArr, activeStatus) => {
-    
-    dispatch( actionViewPageCategorially(popularArr, activeStatus));
+
+    dispatch(actionViewPageCategorially(popularArr, activeStatus));
   };
 
   const ProductImgClickHandler = (eachItem) => {
-    dispatch( actionViewProductPage(eachItem));
+    dispatch(actionViewProductPage(eachItem));
   };
 
   // ========== CONDITIONAL RENDERING ===============
@@ -89,8 +89,8 @@ function TopDealsList(props) {
 
                 <section>
                   <div>
-                    <h4>$33.00</h4>
-                    <h5>$44.00</h5>
+                    <h4>₦3,300</h4>
+                    <h5>₦4,300</h5>
                   </div>
                 </section>
               </div>

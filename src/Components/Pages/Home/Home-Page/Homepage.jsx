@@ -1,8 +1,8 @@
 import React from "react";
-import { HomeDiv } from "../Styles/Homepage.styles";
-import Body from "./Body";
-import Header from "./Header";
-import ProductPage from "./ProductPage";
+import { HomeDiv } from "./Homepage.styles";
+import Body from "../../../../Layouts/Body/Body";
+import Header from "../../../../Layouts/Header/Header";
+import ProductPage from "../../Product-Page/ProductPage";
 
 import { useSelector } from 'react-redux';
 

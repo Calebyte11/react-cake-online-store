@@ -1,13 +1,12 @@
-import Styled from "styled-components";
+import styled from "styled-components";
 
-export const PopularListContainer = Styled.div`
-    /* height: 290px; */
+export const PopularListContainer = styled.div`
     margin-top: -5px;
     background-color: #fff;
     border-radius: 20px;
     width: 98%;
-    font-size: 18px;
-    font-weight: 700;
+    font-size: 17px;
+    font-weight: 500;
     padding: 0px 7px;
     z-index: 333;
     overflow-x: hidden;
@@ -24,7 +23,8 @@ export const PopularListContainer = Styled.div`
             background-color: transparent;
             border: none;
             font-family: inherit;
-            font-size: 15px;
+            font-size: 13px;
+            font-weight: 400;
             color: #ff6464;
             margin-right: 5px;
         }
@@ -32,7 +32,6 @@ export const PopularListContainer = Styled.div`
     }
 
     & > ul {
-        /* gap: 2px; */
         display: flex;
         flex-direction: row;
         margin-left: 0px;
@@ -52,7 +51,6 @@ export const PopularListContainer = Styled.div`
             border-radius: 7px;
             display: flex;
             flex-direction: column;
-            /* box-shadow: 0 5px 18px rgb(32 33 36 / 28%);   */
             box-shadow: 0 1px 6px rgb(32 33 36 / 28%);
             overflow-y: hidden;
 
@@ -60,7 +58,6 @@ export const PopularListContainer = Styled.div`
                 width: 95%;
                 height: 135px;
                 margin: 6px auto 5px auto;
-
                 border-radius: inherit;
             }
 
@@ -94,6 +91,8 @@ export const PopularListContainer = Styled.div`
                             height: 0px;
                             margin-top: 8px;
                             font-size: 15px;
+                            font-weight: 400;
+                            text-transform: capitalize;
                         }
 
                         & > h6{
@@ -106,29 +105,35 @@ export const PopularListContainer = Styled.div`
 
                     }
 
-                    & > button {
+                    /* & > button {
                         background: transparent;
-                        color: #4f4f4f;
                         border: none;
                         outline: none;
                         margin-top: -15px;
-                        font-size : 15px;
+                        font-size : 16px;
+                        color: ${(props) => (props.liked ? "#ff6464" : "#4f4f4f")};
+                    } */
 
-                        /* color: ${(props) =>
-                          props.liked ? "#ff6464" : "#4f4f4f"}; */
-                    }
-
-                    & > div > button {
-                        text-align: start;
-                        padding-left: 0px;
-                        font-size : 14px;
-                        border: none;
-                        outline: none;
-                        background: transparent;
-                        color: #f6a609;
+                    & > div > section {
                         
+                        & > button {
+                            text-align: start;
+                            padding-left: 0px;
+                            font-size : 14px;
+                            border: none;
+                            outline: none;
+                            background: transparent;
+                            color: #f6a609;
+                        }
+                    
+                        & > span {
+                            margin-left: 10px;
+                            font-size: 14px;
+                            color: #6570a7;
+                            font-weight: 400;
+                            width: 100%;
+                        }
                     }
-
                     & > h5 {
                         background: #cacccf;
                         margin-bottom: 30px;
@@ -140,9 +145,19 @@ export const PopularListContainer = Styled.div`
                         font-weight: 700;
                     }
 
+
                 }
             }
         }
 
     }
+`;
+
+export const FavButton = styled.button`
+    background: transparent;
+    border: none;
+    outline: none;
+    margin-top: -15px;
+    font-size : 16px;
+    color: ${(props) => (props.liked ? "#ff6464" : "#4f4f4f")};
 `;

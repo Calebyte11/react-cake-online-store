@@ -11,6 +11,6 @@ export const HomeDiv = styled.div`
     align-items: center;
     overflow-x: hidden;
     position: relative;
-    /* font-family: 'Poppins'; */
-    font-family: system-ui;
+    font-family: 'Poppins';
+    /* font-family: system-ui; */
 `;

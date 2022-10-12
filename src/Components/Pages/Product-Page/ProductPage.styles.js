@@ -3,9 +3,7 @@ import styled from "styled-components";
 // =============== Product container ================
 export const ProductContainer = styled.div`
   margin: 0px;
-  /* height: 100%; */
   position: ${(props) => (props.isFromHomepage ? "absolute" : "none")};
-  /* top: 70px; */
   top: ${(props) => (props.isFromHomepage ? "70px" : "0px")};
   left: 0px;
   right: 0px;
@@ -31,7 +29,7 @@ export const ImageDiv = styled.div`
   }
 `;
 
-// ============= Product Footer =============
+//============= Product Footer =============
 export const ProductFooter = styled.div`
   position: fixed;
   bottom: 0px;
@@ -41,8 +39,7 @@ export const ProductFooter = styled.div`
   width: 100%;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  height: 59px;
+  padding: 10px 0px 10px 0px;
   box-shadow: 0 1px 6px rgb(32 33 36 / 28%);
   z-index: 99999;
 `;
@@ -63,7 +60,7 @@ export const BuyButton = styled.button`
   flex-direction: row;
   align-items: center;
   justify-content: center;
-  gap: 10px;
+  gap: 7px;
 
   & > h3 {
     font-size: 18px;
@@ -100,10 +97,11 @@ export const ProductName = styled.div`
   margin: 0px;
 
   & > h4 {
-    font-size: 18px;
+    font-size: 17px;
     font-weight: 500;
     margin: 0px;
     text-transform: capitalize;
+    line-height: 18px;
   }
 
   & > h6 {

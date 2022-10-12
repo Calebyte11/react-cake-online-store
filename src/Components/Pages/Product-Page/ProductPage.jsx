@@ -11,26 +11,61 @@ import {
   ProductFooter,
   ProductName,
   RatingButton,
-} from "../Styles/ProductPage.styles";
+} from "./ProductPage.styles";
 import { MdOutlineAddShoppingCart } from "react-icons/md";
 import { BsStarFill, BsHeart, BsHeartFill } from "react-icons/bs";
-
-
-
+import AddToCartModal from "../../Portals/Modals/AddToCartModal";
+import { useDispatch, useSelector } from "react-redux";
+import { actionAddToCart } from "../../../State Management/Redux/Ducks/CartReducer";
 
 function ProductPage(props) {
   // ======= UseStates =========
   const [Liked, setLiked] = useState(false);
+  const [AddBtnClick, setAddBtnClick] = useState(false);
+  const [ProductQty, setProductQty] = useState(1);
+
+  // ======= React-redux Hooks for Global State & Actions ======
+  const dispatch = useDispatch();
+
+  const CartData = useSelector(state => state.cartData)
 
   //======= Props Accessing and Destructring =======
   const PageData = props.dataForProductPage;
   console.log(PageData);
-  // console.log(PageData.ImgSrc);
 
-  // ======= Event Handlers =====
+  // ========== Event Handlers ===========
   const LikedHandler = (e) => {
     setLiked(!Liked);
     console.log("Like!!!");
+  };
+
+  const AddToCartHandler = () => {
+    setAddBtnClick(!AddBtnClick);
+
+    if(AddBtnClick){
+      dispatch(actionAddToCart({
+        ProductImgSrc : PageData.ImgSrc,
+        ProductQty : ProductQty
+      }));
+
+      console.log(CartData);
+    }
+  };
+
+  const CloseHandler = (e) => {
+    setAddBtnClick(false);
+  };
+
+  const MinusHandler = (e) => {
+    if (ProductQty > 1) {
+      setProductQty(ProductQty - 1);
+    }
+  };
+
+  const PlusHandler = (e) => {
+    if (ProductQty < 20) {
+      setProductQty(ProductQty + 1);
+    }
   };
 
   // ============== JSX RENDERING ===================
@@ -57,8 +92,8 @@ function ProductPage(props) {
         </section>
 
         <PriceDiv>
-          <h4>NGN 3,000</h4>
-          <h5>NGN 4,500</h5>
+          <h4>₦ 3,000</h4>
+          <h5>₦ 4,500</h5>
           <h6>-40%</h6>
         </PriceDiv>
 
@@ -76,10 +111,21 @@ function ProductPage(props) {
       </DetailsDiv>
 
       <ProductFooter>
-        <BuyButton>
-          <MdOutlineAddShoppingCart />
-          <h3>ADD TO CART</h3>
-        </BuyButton>
+        {AddBtnClick ? (
+          <AddToCartModal
+            ImgSrc={PageData.ImgSrc}
+            AddToCartHandler={AddToCartHandler}
+            CloseHandler={CloseHandler}
+            PlusHandler={PlusHandler}
+            MinusHandler={MinusHandler}
+            ProductQty={ProductQty}
+          />
+        ) : (
+          <BuyButton onClick={AddToCartHandler}>
+            <MdOutlineAddShoppingCart />
+            <h3>ADD TO CART</h3>
+          </BuyButton>
+        )}
       </ProductFooter>
     </ProductContainer>
   );

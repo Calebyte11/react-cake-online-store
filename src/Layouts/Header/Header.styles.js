@@ -96,4 +96,22 @@ export const Button = styled.button`
   outline: none;
   color: #3c4043;
   cursor: pointer;
+  position: relative;
+
+  & > span {
+    font-size: 12px;
+    font-weight: 700;
+    background: #ff6464;
+    width: 13px;
+    aspect-ratio: 1;
+    color: #fff;
+    border-radius: 50%;
+    position: absolute;
+    top: 1px;
+    right: 0px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
 `;

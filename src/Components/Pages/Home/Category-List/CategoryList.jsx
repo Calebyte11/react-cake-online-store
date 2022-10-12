@@ -1,5 +1,5 @@
 import React from "react";
-import { CategoryListContainer } from "../Styles/CategoryList.styles";
+import { CategoryListContainer } from "./CategoryList.styles";
 import {
   Cake1,
   Pizza1,
@@ -9,7 +9,7 @@ import {
   Sharwarma,
   GrilledChicken,
   Meatpie,
-} from "../Images/Images";
+} from "../../../../Assets/Images/Images";
 
 
 

@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { PopularListContainer } from "./PopularList.styles";
+import { PopularListContainer } from "../Home/Popular-List/PopularList.styles";
 
 //==== ENTIRE CONTAINER======
 export const PageCategorialContainer = styled.div`
@@ -48,13 +48,12 @@ export const PriNavList = styled.li`
   flex-direction: column;
   align-items: center;
   justify-content: space-evenly;
-  font-size: 15px;
   overflow: hidden;
 
   & > h3 {
     font-size: 15px;
     font-family: inherit;
-    font-weight: 600;
+    font-weight: 700;
     color: ${({ active }) => (active ? "#ff6464" : "inherit")};
     display: inline-block;
     white-space: nowrap;
@@ -77,8 +76,6 @@ export const PriNavList = styled.li`
 // =========== For the 2 Column list ================
 export const TwoColumnListContainer = styled(PopularListContainer)`
   margin-top: 53px;
-  font-size: 17px;
-  font-weight: 700;
   z-index: 333;
   border-radius: 0px;
   padding-left: 0px;
@@ -86,7 +83,6 @@ export const TwoColumnListContainer = styled(PopularListContainer)`
   min-height: 1vh;
   overflow-y: scroll;
   scroll-behavior: smooth;
-  /* top: 34%; */
   left: 0px;
   right: 0px;
 
@@ -105,6 +101,8 @@ export const TwoColumnListContainer = styled(PopularListContainer)`
     column-gap: 0px;
 
     & > li {
+      display: flex;
+      flex-direction: column;
       background: #fff;
       min-width: 153px;
       width: 47%;
@@ -112,10 +110,12 @@ export const TwoColumnListContainer = styled(PopularListContainer)`
       list-style: none;
       margin: 7px auto 7px auto;
       z-index: 1;
-      border-radius: 8px;
+      border-radius: 6px;
       position: relative;
+      box-shadow: 0 1px 6px rgb(32 33 36 / 28%);
+      overflow-y: hidden;
 
-      // === the discount tag(if any) ====
+      // ==== the discount tag(if any) ====
       & > h5 {
         position: absolute;
         top: -15px;
@@ -130,13 +130,20 @@ export const TwoColumnListContainer = styled(PopularListContainer)`
 
       //==== product image ======
       & > img {
-        height: 57%;
+        width: 95%;
+        height: 135px;
         min-height: 57%;
+        margin: 6px auto 5px auto;
         border-radius: inherit;
       }
 
       //==== price and slashed price ====
       & > div {
+        display : flex;
+        flex-direction: column;
+        padding: 0px 9px 0px 9px;
+        margin-top: 10px;
+
         & > div {
           display: flex;
           flex-direction: row;
@@ -146,10 +153,16 @@ export const TwoColumnListContainer = styled(PopularListContainer)`
           gap: 4px;
 
           & > h4 {
+            height: 0px;
+            margin-top: 0px;
             font-size: 14px;
+            font-weight: 400;
+            text-transform: capitalize;
           }
 
           & > h5 {
+            height: 0px;
+            margin-top: 4px;
             color: #a0a4a8;
             font-size: 11px;
             font-weight: 500;
@@ -159,6 +172,17 @@ export const TwoColumnListContainer = styled(PopularListContainer)`
         }
 
         & > section {
+
+          & > div > button{
+            margin-left: 0px;
+            border: none;
+            background-color: transparent;
+            padding-left: 0px;
+            display: flex;
+            flex-direction: row;
+            color: #f6a609;
+          }
+
           & > span {
             font-size: 12px;
             color: #6570a7;
