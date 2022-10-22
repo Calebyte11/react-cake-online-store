@@ -98,7 +98,7 @@ function Header(props) {
 
           <input
             type="text"
-            placeholder="search desserts, cakes or pizza e.t.c"
+            placeholder="search for desserts, cakes or pizza e.t.c"
           />
         </SearchDiv>
       )}
