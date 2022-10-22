@@ -12,5 +12,4 @@ export const HomeDiv = styled.div`
     overflow-x: hidden;
     position: relative;
     font-family: 'Poppins';
-    /* font-family: system-ui; */
 `;

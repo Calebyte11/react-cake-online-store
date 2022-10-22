@@ -4,7 +4,7 @@ import {
   BtnSpan,
   ButtonDiv,
   MinusBtn,
-} from "../../Portals/Styles/AddToCartModal.styles";
+} from "../../Portals/AddToCartModal/AddToCartModal.styles";
 
 // ===== Page Container ============
 export const CartPageContainer = styled.div`
@@ -218,3 +218,33 @@ export const CartPageFooter = styled(ProductFooter)`
 
 export const CheckOutButton = styled(BuyButton)`
 `;
+
+
+// ======== For Empty Cart Container =========
+export const EmptyCartContainer = styled.div`
+  margin-top: 55px;
+  padding: 0px;
+  margin-top: 50px;
+    padding: 0px;
+    display: flex;
+    flex-direction: column;
+
+  & > img{
+    height: 300px;
+  }
+
+  & > h2 {
+    text-align: center;
+    font-size: 20px;
+    font-weight: 500;
+    margin-top: -10px;
+  }
+
+  & > span {
+    text-align: center;
+    font-size: 15px;
+    font-weight: 400;
+    padding: 0px 10px 0px 10px;
+  }
+`;
+

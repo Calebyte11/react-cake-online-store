@@ -38,6 +38,10 @@ import BerryParfait from "./TopDeals/berriesParfait.jpg";
 import Chicken2 from "./TopDeals/topchicken2.jpg";
 import TopWedCake from "./TopDeals/topwedcake.png";
 
+// ====== for the Illustrations =========
+import EmptyCart from './Illustrations/empty-cart-5521508-4610092.png';
+
+
 // ======= the default export ========
 export {
     //=====for category===
@@ -53,7 +57,7 @@ export {
   // ======for logo =====
   Logo, 
 
-  // ===for popular ======
+  // ====for popular ======
   BlackForestCake,
   PepperoniPizza,
   ChristmasChic,
@@ -79,4 +83,7 @@ export {
   BerryParfait,
   Chicken2,
   TopWedCake,
+
+  // ==== for the illustrations ====
+  EmptyCart,
 };

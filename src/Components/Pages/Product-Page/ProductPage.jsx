@@ -14,7 +14,7 @@ import {
 } from "./ProductPage.styles";
 import { MdOutlineAddShoppingCart } from "react-icons/md";
 import { BsStarFill, BsHeart, BsHeartFill } from "react-icons/bs";
-import AddToCartModal from "../../Portals/Modals/AddToCartModal";
+import AddToCartModal from "../../Portals/AddToCartModal/AddToCartModal";
 import { useDispatch, useSelector } from "react-redux";
 import { actionAddToCart } from "../../../State Management/Redux/Ducks/CartReducer";
 

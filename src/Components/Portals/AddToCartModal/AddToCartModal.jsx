@@ -11,7 +11,7 @@ import {
   OverlayDiv,
   PlusBtn,
   TopOfExpanded,
-} from "../Styles/AddToCartModal.styles";
+} from "./AddToCartModal.styles";
 import { BuyButton } from "../../Pages/Product-Page/ProductPage.styles";
 import { FaMinus, FaPlus } from "react-icons/fa";
 import { BsXLg } from "react-icons/bs";

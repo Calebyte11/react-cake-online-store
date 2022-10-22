@@ -4,6 +4,7 @@ export const OverlayDiv = styled.div`
   height: 100%;
   width: 100%;
   background-color: rgba(33, 33, 33,  0.5);
+  /* backdrop-filter: blur(1px); */
   position: fixed;
   top: 0px;
   right: 0px;
@@ -24,8 +25,7 @@ export const ModalContentsDiv = styled.div`
   padding: 10px 0px 10px 0px;
   box-shadow: 0 1px 6px rgb(32 33 36 / 28%);
   z-index: 99999;
-  transform: translateY(0%);
-  transition: transform 350ms ease-in;
+  border-radius: 10px;
 
 `;
 

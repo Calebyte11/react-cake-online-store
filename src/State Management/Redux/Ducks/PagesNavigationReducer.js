@@ -5,6 +5,7 @@ const ACTION_VIEW_PAGE_CATEGORIALLY =
   "cake-online-store/NavigationFeature/ACTION_VIEW_PAGE_CATEGORIALLY";
 const ACTION_VIEW_PRODUCT_PAGE =
   "cake-online-store/NavigationFeature/ACTION_VIEW_PRODUCT_PAGE";
+const ACTION_VIEW_CART_PAGE = "cake-online-store/NavigationFeature/ACTION_VIEW_CART_PAGE";
 const RESET_ACTION_VIEW_PRODUCT_PAGE =
   "cake-online-store/NavigationFeature/RESET_ACTION_VIEW_PRODUCT_PAGE";
 const RESET_EXPAND = "cake-online-store/NavigationFeature/ACTION_RESET_EXPAND";
@@ -22,6 +23,7 @@ const InitialState = {
   productPageDetails: {
     pageData: null,
   },
+  viewCartPage: false,
 };
 
 // ========== The Reducer ======== which is default export ====
@@ -45,16 +47,19 @@ const pagesNavReducer = (state = InitialState, action) => {
         ...state,
         viewProductPage: true,
         productPageDetails: {
-            pageData: action.data,
+          pageData: action.data,
         },
       };
 
+    case ACTION_VIEW_CART_PAGE:
+      return { state, viewCartPage: true };
+
     case RESET_ACTION_VIEW_PRODUCT_PAGE:
-      return { 
-        ...state, 
+      return {
+        ...state,
         viewProductPage: false,
         productPageDetail: {
-            pageData: null,
+          pageData: null,
         },
       };
 
@@ -69,8 +74,9 @@ const pagesNavReducer = (state = InitialState, action) => {
         },
         viewProductPage: false,
         productPageDetails: {
-            pageData: null,
+          pageData: null,
         },
+        viewCartPage: false,
       };
 
     default:
@@ -99,6 +105,12 @@ export const actionViewProductPage = (onlyArg) => {
   return {
     type: ACTION_VIEW_PRODUCT_PAGE,
     data: onlyArg,
+  };
+};
+
+export const actionViewCartPage = () => {
+  return {
+    type: ACTION_VIEW_CART_PAGE,
   };
 };
 

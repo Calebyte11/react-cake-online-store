@@ -33,7 +33,7 @@ export const LogoSection1 = styled.div`
     gap: 10px;
     height: 100%;
     align-items: center;
-    padding: 0px 5px;
+    padding: 0px 2px;
 
     & > img {
       width: 110px;
@@ -86,29 +86,31 @@ export const Button = styled.button`
   background: transparent;
   text-align: center;
   font-size: ${(props) => (props.size ? props.size : "25px")};
-  width: 35px;
+  width: 38px;
+  aspect-ratio: 1;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  height: 39px;
   border: none;
   outline: none;
   color: #3c4043;
   cursor: pointer;
   position: relative;
+  background:${(props => props.isActive ?  '#ffa2a257' : 'transparent')};
+  border-radius: 50%;
 
   & > span {
     font-size: 12px;
     font-weight: 700;
     background: #ff6464;
-    width: 13px;
+    width: 16px;
     aspect-ratio: 1;
     color: #fff;
     border-radius: 50%;
     position: absolute;
-    top: 1px;
-    right: 0px;
+    top: -4px;
+    right: -2px;
     display: flex;
     flex-direction: row;
     justify-content: center;

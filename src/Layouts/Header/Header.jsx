@@ -10,7 +10,7 @@ import { FaBars } from "react-icons/fa";
 import { MdOutlineShoppingCart, MdSearch } from "react-icons/md";
 import { Logo } from "../../Assets/Images/Images";
 
-import { actionResetAllExpand, actionResetViewProductPage } from "../../State Management/Redux/Ducks/PagesNavigationReducer";
+import { actionResetAllExpand, actionResetViewProductPage, actionViewCartPage } from "../../State Management/Redux/Ducks/PagesNavigationReducer";
 import { useSelector, useDispatch } from 'react-redux';
 
 
@@ -21,7 +21,13 @@ function Header(props) {
   
   //============== Reading State & Dispatch with React-redux Hooks ============
   const expansionStateObj = useSelector((state) => state.pagesNavigation);
-  const cartItems = useSelector((state) => state.cartData)
+
+  const cartItems = useSelector((state) => state.cartData);
+
+  // ====== Sum of quantities of cart items with array reduce method ======
+  const cartItemsCount = cartItems.reduce((accumulator, item) => {
+    return accumulator + item.ProductQty
+  }, 0);
 
   const dispatch = useDispatch();
 
@@ -37,7 +43,10 @@ function Header(props) {
     console.log(expansionStateObj);
   };
 
-  // console.log(expansionStateObj);
+  const cartButtonHandler = (e) => {
+    dispatch(actionViewCartPage());
+  }
+
 
   // ========== RENDERING OF JSX ==========
   return (
@@ -45,7 +54,8 @@ function Header(props) {
       <LogoSection1>
         <section>
           {expansionStateObj.viewPageCategorially ||
-          expansionStateObj.viewProductPage ? (
+          expansionStateObj.viewProductPage ||
+          expansionStateObj.viewCartPage  ? (
             <Button onClick={arrowLeftHandler} size={"38px"}>
               <BsArrowLeftShort />
             </Button>
@@ -60,7 +70,8 @@ function Header(props) {
 
         <section>
           {expansionStateObj.viewPageCategorially ||
-          expansionStateObj.viewProductPage ? (
+          expansionStateObj.viewProductPage ||
+          expansionStateObj.viewCartPage ? (
             <Button size={"29px"}>
               <MdSearch />
             </Button>
@@ -70,15 +81,16 @@ function Header(props) {
             <BsPersonCircle />
           </Button>
 
-          <Button>
+          <Button onClick={cartButtonHandler} isActive = {expansionStateObj.viewCartPage? true : false}>
             <MdOutlineShoppingCart/>
-            { cartItems.length ? <span>{cartItems.length}</span> : null }
+            { cartItems.length ? <span>{cartItemsCount}</span> : null }
           </Button>
         </section>
       </LogoSection1>
 
       {expansionStateObj.viewPageCategorially ||
-      expansionStateObj.viewProductPage ? null : (
+      expansionStateObj.viewProductPage ||
+      expansionStateObj.viewCartPage ? null : (
         <SearchDiv>
           <Button>
             <MdSearch />
